@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scissors Paper Stone!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Scissors Paper Stone!</h1>
+    </header>
+
+    <div class="score-board">
+        <div id="user-label" class="badge">user</div>
+        <div id="comp-label" class="badge">comp</div>
+        <span id="user-score">0</span>:<span id="comp-score">0</span>
+    </div>
+
+    <div class="result">
+        <p>Paper covers Stone! You win!</p>
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="Stone">
+            <img src="images/stone.png" alt="">
+        </div>
+        <div class="choice" id="Paper">
+            <img src="images/paper.png" alt="">
+        </div>
+        <div class="choice" id="Scissors">
+            <img src="images/scissors.png" alt="">
+        </div>
+    </div>
+
+    <p id="msg">Make your move.</p>
+    
+    <script src="app.js"></script>
+</body>
+</html>
