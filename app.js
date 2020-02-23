@@ -24,7 +24,7 @@ function win(user, comp) {
     compScore_span.innerHTML = compScore;
     result_div.innerHTML = `${user}${smallUser} beats ${comp}${smallComp}. You win! 🔥`; 
     userChoice_div.classList.add('green-glow');
-    setTimeout(function() {userChoice_div.classList.remove('green-glow')}, 300);
+    setTimeout(() => userChoice_div.classList.remove('green-glow'), 300);
 }
 
 function lose(user, comp) {
@@ -35,7 +35,7 @@ function lose(user, comp) {
     compScore_span.innerHTML = compScore;
     result_div.innerHTML = `${user}${smallUser} loses to ${comp}${smallComp}. You lost... 💩`; 
     userChoice_div.classList.add('red-glow');
-    setTimeout(function() {userChoice_div.classList.remove('red-glow')}, 300);
+    setTimeout(() => userChoice_div.classList.remove('red-glow'), 300);
 }
 
 function draw(user, comp) {
@@ -43,7 +43,7 @@ function draw(user, comp) {
     const userChoice_div = document.getElementById(user);
     result_div.innerHTML = `${user}${smallUser} draws with ${comp}${smallComp}. It's a draw. 🤭`; 
     userChoice_div.classList.add('grey-glow');
-    setTimeout(function() {userChoice_div.classList.remove('grey-glow')}, 300);
+    setTimeout(() => userChoice_div.classList.remove('grey-glow'), 300);
 }
 
 function game(input) {
@@ -67,17 +67,11 @@ function game(input) {
 }
 
 function main() {
-    stone_div.addEventListener('click', function() {
-        game("Stone"); 
-    })
+    stone_div.addEventListener('click', () => game("Stone"));
     
-    paper_div.addEventListener('click', function() {
-        game("Paper"); 
-    })
+    paper_div.addEventListener('click', () => game("Paper"));
     
-    scissors_div.addEventListener('click', function() {
-        game("Scissors"); 
-    })
+    scissors_div.addEventListener('click', () => game("Scissors"));
 }
 
 main();
