@@ -22,7 +22,7 @@ function win(user, comp) {
     userScore++; 
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_div.innerHTML = `${user}${smallUser} beats ${comp}${smallComp}. You win! 🔥`; 
+    result_div.innerHTML = `${user}${smallUser} beats ${comp}${smallComp}. <br />You win! 🔥`; 
     userChoice_div.classList.add('green-glow');
     setTimeout(() => userChoice_div.classList.remove('green-glow'), 300);
 }
@@ -33,7 +33,7 @@ function lose(user, comp) {
     compScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_div.innerHTML = `${user}${smallUser} loses to ${comp}${smallComp}. You lost... 💩`; 
+    result_div.innerHTML = `${user}${smallUser} loses to ${comp}${smallComp}. <br />You lost... 💩`; 
     userChoice_div.classList.add('red-glow');
     setTimeout(() => userChoice_div.classList.remove('red-glow'), 300);
 }
@@ -41,7 +41,7 @@ function lose(user, comp) {
 function draw(user, comp) {
     console.log(user);
     const userChoice_div = document.getElementById(user);
-    result_div.innerHTML = `${user}${smallUser} draws with ${comp}${smallComp}. It's a draw. 🤭`; 
+    result_div.innerHTML = `${user}${smallUser} draws with ${comp}${smallComp}. <br />It's a draw. 🤭`; 
     userChoice_div.classList.add('grey-glow');
     setTimeout(() => userChoice_div.classList.remove('grey-glow'), 300);
 }
